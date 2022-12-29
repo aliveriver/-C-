@@ -1,0 +1,56 @@
+#include<stdio.h>
+int main()
+{
+	int a1=-1,a2=-1,a3=-1,a4=-1,x;
+	scanf("%d",&x);
+	if(x/10==0)
+	{
+		a1=x;
+		printf("%d",a1);
+		return 0;
+	}else
+	{
+		a1=x%10;
+		x/=10;
+	}
+	if(x<=9&&x>=1)
+	{
+		a2=x;
+		x=0;
+	}
+	if(x>=10)
+	{
+		a2=x%10;
+		x/=10;
+	}
+	if(x<=9&&x>=1)
+	{
+		a3=x;
+		x=0;
+	}
+	if(x>=10)
+	{
+		a3=x%10;
+		x/=10;
+	}
+	if(x<=9&&x>=1)
+	{
+		a4=x;
+		x=0;
+	}
+	if(x>=10)
+	{
+		a4=x%10;
+		x/=10;
+	}
+	if(a3==-1)
+	{
+		printf("%d+%d=%d",a2,a1,a1+a2);
+	}else if(a4==-1)
+	{
+		printf("%d+%d+%d=%d",a3,a2,a1,a1+a2+a3);
+	}else
+	{
+		printf("%d+%d+%d+%d=%d",a4,a3,a2,a1,a4+a1+a2+a3);
+	}
+}
